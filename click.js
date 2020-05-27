@@ -17,7 +17,12 @@ function Click(){
     answerinfo=Number(answerinfo + answerValue);
     multiValue=Number(multiValue-1);
   }}
+  if (multiValue < 0){
+    while (multiValue < 0){
+    answerinfo=Number(answerinfo - answerValue);
+    multiValue=Number(multiValue+1);
+  }}
   if (multiValue == 0){
     response.innerHTML=answerinfo;
   }
-}  
+}
